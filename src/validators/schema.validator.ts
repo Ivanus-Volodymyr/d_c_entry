@@ -12,10 +12,10 @@ const schema = Joi.object({
   }),
   code: Joi.string()
     .required()
-    .pattern(/^DISCOUNT2024$/)
+    .pattern(/^DISCOUNT2024-\d{13}$/)
     .messages({
       'string.empty': 'Discount code is required',
-      'string.pattern.base': 'Discount code must be as patern "DISCOUNT2024"',
+      'string.pattern.base': 'Discount code must be as patern ^DISCOUNT2024-date',
     }),
   note: Joi.string().required().min(2).max(30).messages({
     'string.empty': 'Note is required',

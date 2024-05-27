@@ -4,7 +4,7 @@ const useGenerateDiscountCode = () => {
   const [discountCode, setDiscountCode] = useState<string>('');
 
   const generateCode = () => {
-    const code = 'DISCOUNT2024';
+    const code = `DISCOUNT2024-${new Date().getTime()}`;
     setDiscountCode(code);
   };
 
