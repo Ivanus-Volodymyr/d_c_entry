@@ -1,0 +1,11 @@
+version: "1.2"
+services:
+  app:
+    container_name: d_c_entry
+    restart: always
+    build: .
+    ports:
+      - "3000:3000"
+    volumes:
+      - .:/app
+      - /app/node_modules

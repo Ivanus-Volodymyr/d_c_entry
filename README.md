@@ -1,46 +1,117 @@
-# Getting Started with Create React App
+# Front-End Developer Task
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This project is a simplified version of a feature for a React TypeScript application. The objective of this task is to integrate basic UI components and functionality, demonstrating skills in React, TypeScript, and the ability to translate design concepts into functional application components.
 
-## Available Scripts
+## Features
 
-In the project directory, you can run:
+1. **Radio Selection Buttons**
+    - A set of radio buttons allowing the user to select between three options ("Option A", "Option B", "Option C").
+    - The selected option is stored in the application's state.
 
-### `npm start`
+2. **Text Box for Discount Code Entry**
+    - A text box for users to enter a discount code.
+    - Basic validation checks if the entered text follows a simple pattern (e.g., "DISCOUNT2024").
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+3. **Button to Simulate Discount Code Generation**
+    - A button that generates a mock discount code (e.g., "NEWCODE123") when clicked and displays it to the user.
+    - The generated code is displayed but not stored.
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+4. **Basic Note Field**
+    - A text box for users to enter notes or comments.
+    - The entered text is accessible in the application's state.
 
-### `npm test`
+## Technologies Used
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+- **React** for UI development
+- **Redux Toolkit** for state management
+- **Tailwind CSS** for styling
+- **TypeScript** for type checking
+- **Eslint and Prettier** for syntax
+- **React Use Forms** for forms
+- **Joi** for forms validation
+- **Docker** for containerization
 
-### `npm run build`
+## Setup and Running the Application
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+### Prerequisites
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+Ensure you have the following installed:
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+- Node.js (>=14.x.x)
+- npm (>=6.x.x) or yarn (>=1.x.x)
 
-### `npm run eject`
+### Installation
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+1. Clone the repository:
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+    ```bash
+    git clone https://github.com/Ivanus-Volodymyr/d_c_entry
+    ```
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+2. Navigate to the project directory:
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+    ```bash
+    cd f_c_entry
+    ```
 
-## Learn More
+3. Install the dependencies:
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+    ```bash
+    npm install
+    # or
+    yarn install
+    ```
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+### Running the Application
+
+To start the application, run:
+
+```bash
+npm start
+# or
+yarn start
+```
+
+The application should now be running on http://localhost:3000.
+
+#
+### Running an application in Docker
+Follow these steps to get your project started with Docker:
+1. Make sure that Docker is installed on your PC. This can be done with the `docker -v` command.
+   If you don't have Docker installed, do it here [install Docker](https://docs.docker.com/engine/install/).
+2. Make sure you have Docker running.
+3. Make sure you are in the root folder of the project.
+
+
+To run an application in Docker run the command:
+### `docker-compose up --build`
+The application should now be running on http://localhost:3000.
+
+#
+### File Structure
+frontend-developer-task/
+```
+├── public/
+│   ├── index.html
+│   └── ...
+├── src/
+|   ├── pages/
+│   ├── components/
+│   │   ├── RadioButtons.tsx
+│   │   ├── DiscountCodeInput.tsx
+│   │   ├── GenerateCodeButton.tsx
+│   │   ├── NoteField.tsx
+│   │   └── ...
+│   ├── hooks/
+│   │   └── useGenerateDiscountCode.ts
+│   ├── store/
+│   │   ├── slices/
+│   │   │   └── discountSlice.ts
+│   │   └── store.ts
+│   ├── App.tsx
+│   ├── index.tsx
+│   └── ...
+├── package.json
+├── tailwind.config.js
+└── ...
+```
