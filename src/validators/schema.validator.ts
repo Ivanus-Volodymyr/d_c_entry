@@ -7,8 +7,9 @@ type FormValues = {
 };
 
 const schema = Joi.object({
-  option: Joi.string().required().messages({
+  option: Joi.string().valid('Option A', 'Option B', 'Option C').required().messages({
     'string.empty': 'Option is required',
+    'any.only': 'Option must be one of: Option A, Option B, Option C',
   }),
   code: Joi.string()
     .required()
